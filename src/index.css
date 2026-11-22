@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-body: 'DM Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  }
+
+  html {
+    font-family: var(--font-body);
+    background-color: #09090d;
+    color: #f5f4fa;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-mono {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.buzzly-ambient-bg {
+  background-color: #09090d;
+  background-image:
+    radial-gradient(ellipse 75% 50% at 15% 0%, rgba(124, 58, 237, 0.16), transparent 60%),
+    radial-gradient(ellipse 60% 45% at 90% 15%, rgba(88, 28, 135, 0.11), transparent 55%);
+}
+
+/* Custom subtle dark scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 92, 246, 0.45);
+}
+
+@keyframes eq-bar {
+  0%, 100% {
+    transform: scaleY(0.35);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+.animate-eq-1 {
+  animation: eq-bar 0.75s ease-in-out infinite;
+  transform-origin: bottom;
+}
+
+.animate-eq-2 {
+  animation: eq-bar 0.55s ease-in-out 0.15s infinite;
+  transform-origin: bottom;
+}
+
+.animate-eq-3 {
+  animation: eq-bar 0.85s ease-in-out 0.3s infinite;
+  transform-origin: bottom;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-eq-1,
+  .animate-eq-2,
+  .animate-eq-3 {
+    animation: none;
+  }
+}

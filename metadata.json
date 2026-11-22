@@ -1,0 +1,6 @@
+{
+  "name": "Buzzly Music",
+  "description": "Stream Hindi, English, Punjabi, Bhojpuri, and Bollywood hits with studio-grade playback, personal playlists, and offline listening.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
